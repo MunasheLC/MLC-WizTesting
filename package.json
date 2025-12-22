@@ -1,0 +1,14 @@
+{
+  "name": "wiz-vulnerability-test",
+  "version": "1.0.0",
+  "description": "A package file containing outdated modules with known vulnerabilities for Wiz scan testing.",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "4.17.4",
+    "express": "4.15.2",
+    "axios": "0.18.0",
+    "jsonwebtoken": "8.5.0",
+    "next": "13.4.0",
+    "react-server": "0.0.1"
+  }
+}
