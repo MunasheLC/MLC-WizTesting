@@ -37,8 +37,15 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.7</version>
-
         </dependency>
+        <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     </dependencies>
 
     <build>
@@ -67,3 +74,4 @@
         </plugins>
     </build>
 </project>
+
