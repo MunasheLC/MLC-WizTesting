@@ -1,0 +1,16 @@
+# Global owners by default
+# MunasheLC will be requested for review for all files
+* @MunasheLC
+
+# Specific owners for different file types
+# MunasheLC owns all documentation files
+*.md    @MunasheLC
+*.txt   @MunasheLC
+
+# Path-specific ownership
+# MunasheLC owns everything in the build-scripts folder
+/scripts/ @MunasheLC
+
+# Configuration and Security files
+# MunasheLC owns the Maven project configuration
+/pom.xml @MunasheLC
