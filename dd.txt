@@ -1,0 +1,4 @@
+https://deliver.blob.core.windows.net/public/file10.bin?sv=2022-11-02&ss=b&srt=co&sp=r&se=2026-01-01T00:00:00Z&st=2025-01-01T00:00:00Z&spr=https&sig=aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aB4c%3D
+https://storageacct.blob.core.windows.net/archives/pack9.zip?sv=2022-11-02&ss=b&srt=sco&sp=rl&se=2026-01-01T05:00:00Z&st=2025-01-01T05:00:00Z&spr=https&sig=xY8zW7vV6uU5tT4sS3rR2qQ1pP0oO9nN8mM7lL6kK5jJ%3D
+https://korbytcsshare.blob.core.windows.net/customerfiles/Brightsign/autorun6.zip?sv=2022-11-02&ss=b&srt=o&sp=r&se=2025-12-31T23:59:59Z&st=2025-10-22T15:00:00Z&spr=https&sig=hI9gJ8fK7eL6dM5cN4bP3aQ2rS1tT0uUvVwWxXyY%3D
+https://korbytcsshare.blob.core.windows.net/customerfiles/Brightsign/autorun6.zip?sv=2023-01-03&st=2024-09-10T08%3A00%3A00Z&se=2024-09-11T08%3A00%3A00Z&sr=b&sp=r&spr=https&sig=8b7a6c5d4e3f2a19081706f5e4d3c2b1%3D
