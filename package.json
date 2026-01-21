@@ -10,6 +10,9 @@
     "jsonwebtoken": "8.5.0",
     "next": "13.4.0",
     "follow-redirects": "1.15.3",
-    "react-server": "0.0.1"
+    "react-server": "0.0.1",
+    "chalk": "5.6.1",
+    "devalue": "5.3.0",
+    "@mcpjam/inspector": "0.1.0"
   }
 }
