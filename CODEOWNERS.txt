@@ -1,15 +1,2 @@
-# Global owners
-# MunasheLC and basic-games team are default owners for all files
-* @MunasheLC @Sitecore-PD-Sandbox/basic-games
-
-# Documentation and text files
-*.md    @MunasheLC
-*.txt   @MunasheLC
-
-# Path-specific ownership
-# basic-games team owns everything in the games folder
-/games/ @Sitecore-PD-Sandbox/basic-games
-
-# Configuration and Security files
-/pom.xml @MunasheLC
-*.json   @MunasheLC
+# Global owners for everything in the repository
+* @MunasheLC @MerlinWiz
