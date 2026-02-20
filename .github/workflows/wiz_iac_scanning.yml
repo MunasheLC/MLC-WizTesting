@@ -1,0 +1,49 @@
+name: "wiz-cli"
+
+on:
+  pull_request:
+
+jobs:
+  wiz-cli-redis-image-scan:
+    name: "Wiz-cli Redis Image Scan (SARIF)"
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+
+    env:
+      IMAGE: "redis:3.2.12-stretch"   # Old tag → will contain CVEs
+      POLICY: "Default vulnerabilities policy"
+      SARIF_FILE: "wiz-results.sarif"
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull Redis image
+        run: docker pull "${IMAGE}"
+
+      - name: Download Wiz CLI
+        run: |
+          curl -L -o wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+          chmod +x wizcli
+
+      - name: Scan Redis image and generate SARIF
+        env:
+          WIZ_CLIENT_ID: ${{ secrets.WIZ_CLIENT_ID }}
+          WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET }}
+        run: |
+          ./wizcli scan container-image "${IMAGE}" \
+            --policies "${POLICY}" \
+            --sarif-output-file "${SARIF_FILE}"
+
+      - name: Upload SARIF to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ env.SARIF_FILE }}
