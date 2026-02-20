@@ -1,38 +1,49 @@
 name: "wiz-cli"
-on: [pull_request]
+
+on:
+  pull_request:
 
 jobs:
-  wiz-cli-image-scan:
-    name: "Wiz-cli Image Scan"
+  wiz-cli-redis-image-scan:
+    name: "Wiz-cli Redis Image Scan (SARIF)"
     runs-on: ubuntu-latest
-    env:
-      SCAN_PATH: "." # Set the relative path in the repo to build the image from
-      TAG: "docker-test-tag" # Set the tag to use for the image
-      POLICY: "Default vulnerabilities policy" # Set the desired Wiz CLI policy to use
 
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+
+    env:
+      IMAGE: "redis:3.2.12-stretch"   # Intentionally old -> should show CVEs
+      POLICY: "Default vulnerabilities policy"
+      SARIF_FILE: "wiz-results.sarif"
+
     defaults:
       run:
         shell: bash
 
     steps:
-      # Checkout the repository to the GitHub Actions runner
-      - name: Check out repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # It's possible to skip this step if this job is scheduled after an image-build job.
-      # If that's the case, also set "Run wiz CLI docker image scan" step accordingly
-      - name: Build the Docker image
-        run: cd $SCAN_PATH && docker build . --tag $TAG # Configure to fit the params you use to build your image
+      - name: Pull Redis image
+        run: docker pull "${IMAGE}"
 
       - name: Download Wiz CLI
-        run: curl -o wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64 && chmod +x wizcli
+        run: |
+          curl -L -o wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+          chmod +x wizcli
 
-      - name: Run wiz-cli docker image scan
+      - name: Scan Redis image (output SARIF)
         env:
           WIZ_CLIENT_ID: ${{ secrets.WIZ_CLIENT_ID }}
           WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET }}
-        run: ./wizcli scan container-image docker.io/redis/rdi-collector-api:1.16.0 --by-policy-hits=DISABLED
+        run: |
+          ./wizcli scan container-image "${IMAGE}" \
+            --policies "${POLICY}" \
+            --output "${SARIF_FILE}",sarif
 
-      - name: Fetch digest of Docker image for Graph enrichment
-        run: ./wizcli tag $TAG
+      - name: Upload SARIF to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ env.SARIF_FILE }}
