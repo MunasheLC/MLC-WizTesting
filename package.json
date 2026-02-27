@@ -1,18 +1,18 @@
 {
-  "name": "wiz-pr-test-v2",
+  "name": "wiz-pr-test-v3-2026",
   "version": "1.0.0",
-  "description": "Alternative package file for Wiz PR scanning with fresh CVE-rich dependencies.",
+  "description": "VCS scan test with 2025-2026 high-priority vulnerabilities including React2Shell and prototype pollution bypasses.",
   "main": "index.js",
   "dependencies": {
-    "glob": "10.4.0",
-    "sharp": "0.32.1",
-    "vm2": "3.9.19",
-    "request": "2.88.2",
-    "ip": "1.1.8",
-    "validator": "13.6.0",
-    "nth-check": "2.0.0",
-    "ms": "2.1.2",
     "react-server-dom-webpack": "19.0.0",
-    "braces": "3.0.2"
+    "set-in": "2.0.1",
+    "debug": "4.4.2",
+    "dagre-d3-es": "7.0.9",
+    "lockfile-lint-api": "5.9.1",
+    "feathersjs/authentication-oauth": "5.0.0-pre.1",
+    "undici": "6.22.0",
+    "micromatch": "4.0.5",
+    "chalk": "5.3.0",
+    "tar": "6.1.11"
   }
 }
