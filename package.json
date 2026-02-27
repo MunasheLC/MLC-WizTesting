@@ -1,19 +1,18 @@
 {
-  "name": "wiz-vulnerability-test",
+  "name": "wiz-pr-test-v2",
   "version": "1.0.0",
-  "description": "A package file containing modules with vulnerabilities ranging from Low to Critical for Wiz scan testing.",
+  "description": "Alternative package file for Wiz PR scanning with fresh CVE-rich dependencies.",
   "main": "index.js",
   "dependencies": {
-    "lodash": "4.17.4",
-    "express": "4.15.2",
-    "axios": "0.18.0",
-    "jsonwebtoken": "8.5.0",
-    "next": "13.4.0",
-    "follow-redirects": "1.15.3",
-    "fastify": "2.0.0",
-    "minimist": "1.2.0",
-    "moment": "2.29.1",
-    "qs": "6.7.0",
-    "shelljs": "0.8.4"
+    "glob": "10.4.0",
+    "sharp": "0.32.1",
+    "vm2": "3.9.19",
+    "request": "2.88.2",
+    "ip": "1.1.8",
+    "validator": "13.6.0",
+    "nth-check": "2.0.0",
+    "ms": "2.1.2",
+    "react-server-dom-webpack": "19.0.0",
+    "braces": "3.0.2"
   }
 }
