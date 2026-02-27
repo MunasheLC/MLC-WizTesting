@@ -1,18 +1,18 @@
 {
-  "name": "wiz-pr-test-v3-2026",
+  "name": "wiz-stress-test-2026",
   "version": "1.0.0",
-  "description": "VCS scan test with 2025-2026 high-priority vulnerabilities including React2Shell and prototype pollution bypasses.",
+  "description": "Critical test file featuring React2Shell, Shai-Hulud worm mimics, and 2026 prototype pollution.",
   "main": "index.js",
   "dependencies": {
     "react-server-dom-webpack": "19.0.0",
-    "set-in": "2.0.1",
+    "next": "15.0.0",
     "debug": "4.4.2",
-    "dagre-d3-es": "7.0.9",
-    "lockfile-lint-api": "5.9.1",
-    "feathersjs/authentication-oauth": "5.0.0-pre.1",
-    "undici": "6.22.0",
-    "micromatch": "4.0.5",
     "chalk": "5.3.0",
-    "tar": "6.1.11"
+    "glob": "10.4.0",
+    "set-in": "2.0.1",
+    "ip": "1.1.8",
+    "micromatch": "4.0.5",
+    "undici": "6.22.0",
+    "braces": "3.0.2"
   }
 }
