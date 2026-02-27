@@ -1,18 +1,16 @@
 {
-  "name": "wiz-stress-test-2026",
+  "name": "wiz-pr-test-feb-2026",
   "version": "1.0.0",
-  "description": "Critical test file featuring React2Shell, Shai-Hulud worm mimics, and 2026 prototype pollution.",
+  "description": "VCS test file featuring Feb 2026 criticals: Parse Server auth bypass and Axios 2026 DoS.",
   "main": "index.js",
   "dependencies": {
-    "react-server-dom-webpack": "19.0.0",
-    "next": "15.0.0",
-    "debug": "4.4.2",
-    "chalk": "5.3.0",
-    "glob": "10.4.0",
-    "set-in": "2.0.1",
-    "ip": "1.1.8",
-    "micromatch": "4.0.5",
-    "undici": "6.22.0",
-    "braces": "3.0.2"
+    "parse-server": "8.6.2",
+    "axios": "1.13.4",
+    "openclaw": "2026.2.24",
+    "deephas": "1.0.7",
+    "node-tar": "7.5.6",
+    "yt-dlp": "2025.10.07",
+    "set-in": "2.0.4",
+    "undici": "6.22.0"
   }
 }
