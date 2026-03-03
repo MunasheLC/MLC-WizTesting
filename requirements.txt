@@ -1,0 +1,1 @@
+pyyaml==5.3   # Vulnerable version (CVE-2020-14343)
