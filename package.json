@@ -1,14 +1,14 @@
 {
-  "name": "wiz-pr-test-feb-2026",
+  "name": "vulnerability-demo",
   "version": "1.0.0",
-  "description": "VCS test file featuring Feb 2026 criticals: Parse Server auth bypass and Axios 2026 DoS.",
+  "description": "A project designed to trigger GitHub Dependabot alerts",
   "main": "index.js",
   "dependencies": {
-    "parse-server": "8.6.2",
-    "axios": "1.13.4",
-    "openclaw": "2026.2.24",
-    "deephas": "1.0.7",
-    "node-tar": "7.5.6",
-    "yt-dlp": "2025.10.07"
+    "lodash": "4.17.15",
+    "axios": "0.18.0",
+    "moment": "2.29.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
