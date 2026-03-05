@@ -9,6 +9,6 @@
     "moment": "2.29.1"
   },
   "scripts": {
-    "test": "echo \"Error: no testing \" && exit 1"
+    "test": "echo \"Error: no testn \" && exit 1"
   }
 }
