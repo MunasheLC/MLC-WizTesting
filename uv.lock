@@ -1,0 +1,20 @@
+[[package]]
+name = "ansible-core"
+version = "2.20.3"
+source = { registry = "https://common.artifactory.cc.bmwgroup.net/artifactory/api/pypi/codecraft-pypi-public/simple/" }
+dependencies = [
+    { name = "cryptography" },
+    { name = "jinja2" },
+    { name = "packaging" },
+    { name = "pyyaml" },
+    { name = "resolvelib" },
+]
+
+[[package]]
+name = "cryptography"
+# Updated to 46.0.5 to resolve a specific CVE
+version = "46.0.5"
+source = { registry = "https://common.artifactory.cc.bmwgroup.net/artifactory/api/pypi/codecraft-pypi-public/simple/" }
+dependencies = [
+    { name = "cffi", marker = "platform_python_implementation != 'PyPy'" },
+]
