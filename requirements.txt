@@ -1,0 +1,12 @@
+# Fixed version to resolve CVE
+cryptography==46.0.3
+
+# Core dependencies for ansible-core 2.20.3
+ansible-core==2.20.3
+jinja2
+packaging
+pyyaml
+resolvelib
+
+# Platform-specific dependency for cryptography
+cffi; platform_python_implementation != 'PyPy'
