@@ -1,14 +1,14 @@
-{
-  "name": "critical-vulnerability-demo-2026",
-  "version": "1.0.0",
-  "description": "Triggering critical RCE and supply-chain malware alerts",
-  "dependencies": {
-    "react-server": "19.2.0",
-    "next": "15.0.0",
-    "tar": "7.5.6",
-    "undici": "6.21.0",
-    "ethres": "1.0.2",
-    "uudi": "1.4.1",
-    "color-name": "2.0.1"
-  }
-}
+// {
+//   "name": "critical-vulnerability-demo-2026",
+//   "version": "1.0.0",
+//   "description": "Triggering critical RCE and supply-chain malware alerts",
+//   "dependencies": {
+//     "react-server": "19.2.0",
+//     "next": "15.0.0",
+//     "tar": "7.5.6",
+//     "undici": "6.21.0",
+//     "ethres": "1.0.2",
+//     "uudi": "1.4.1",
+//     "color-name": "2.0.1"
+//   }
+// }
