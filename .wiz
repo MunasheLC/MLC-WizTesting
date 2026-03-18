@@ -1,0 +1,8 @@
+ignore:
+  iac:
+    c488ffe7-0a87-4210-8df3-2f44ea8783e1:
+      /Dockerfile.node:
+        reason: "Dockerfile used for Dependabot tracking only, not for building product"
+    94b9f985-6707-4693-9647-3a38527d171d:
+      /Dockerfile.node:
+        reason: "Dockerfile used for Dependabot "      
