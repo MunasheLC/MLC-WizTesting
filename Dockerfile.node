@@ -1,2 +1,1 @@
-# wiz-scan ignore-line
 FROM node:25-alpine
