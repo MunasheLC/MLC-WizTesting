@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nkf (0.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nkf
+
+BUNDLED WITH
+   2.2.33
