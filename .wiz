@@ -1,7 +1,7 @@
-ignore:
-  iac:
-    # CRS-001: Private ECR Repository tag immutability should be enabled (HIGH)
-    81d3684c-ca5c-4f68-8652-250b68bec398:
-      /iac/terraform/wiz-dotfile-test/ignored/**:
-        reason: RISK_ACCEPTED
-        expires: 2026-12-31T00:00:00Z
+# ignore:
+#   iac:
+#     # CRS-001: Private ECR Repository tag immutability should be enabled (HIGH)
+#     81d3684c-ca5c-4f68-8652-250b68bec398:
+#       /iac/terraform/wiz-dotfile-test/ignored/**:
+#         reason: RISK_ACCEPTED
+#         expires: 2026-12-31T00:00:00Z
