@@ -1,8 +1,7 @@
 ignore:
   iac:
-    c488ffe7-0a87-4210-8df3-2f44ea8783e1:
-      /Dockerfile.node:
-        reason: "Dockerfile used for Dependabot tracking only, not for building product"
-    94b9f985-6707-4693-9647-3a38527d171d:
-      /Dockerfile.node:
-        reason: "Dockerfile used for Dependabot "      
+    # CRS-001: Private ECR Repository tag immutability should be enabled (HIGH)
+    81d3684c-ca5c-4f68-8652-250b68bec398:
+      /iac/terraform/wiz-dotfile-verify/ignored/**:
+        reason: RISK_ACCEPTED
+        expires: 2026-12-31T00:00:00Z
